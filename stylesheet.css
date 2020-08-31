@@ -1,9 +1,38 @@
-* {
-  box-sizing: border-box;
+h1{color:#1abc9c}
+
+header{
+    background-color:#94c674
 }
 
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
-  background-image: url(comori.png);
+.contents-wrappper{
+    text-align:center;
+}
+
+li{
+    list-style:none;
+}
+
+.icon{padding:2rem}
+
+.title{
+    font-size:5rem;
+}
+
+.sub-title{
+    padding-bottom:3rem;
+}
+
+.contents{
+    padding-top:2rem;
+    padding-bottom:2rem 
+}
+
+.concept{
+    width:90%;
+   
+    margin:0 auto
+}
+
+body{
+    background-color:#f1e2be
 }
