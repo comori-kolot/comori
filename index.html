@@ -4,42 +4,148 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COMORI</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+ 
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  
 </head>
 <body>
-  <header>
-    <h3 class="icon">COMORI</h3>
+  <header class="page-header wrapper sticky-top">
+    <h1 class="icon">COMORI</h1>
+    <<!--<nav>
+      <ul class="main-nav">
+        <li><a href="#concept">CONCEPT</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav> -->
   </header>
   <div class="contents-wrappper">
-      <h1 class="title">COMORI</h1>
-      <h2 class="sub-title">ー森を、創ろうー</h2>
-      <img src="top.png" class="top">
+     
       <div class="contents concept">
-        <h2>-CONCEPT-</h2>
-        <ul>
-          <li>
-            COMORIは京都大学森林科学科の学生2人が立ち上げた小さな学生団体です。
-          </li>
-          <li>
-            COMORIという名前には「"CO"＝一緒に、"MORI"＝森　の在り方を考えることを通して日本のローカルの在り方を変えていく」という願いが込められています。
-          </li>
-          <li>
-            私達は、デザインやWEBサービスの開発、情報発信を通じてローカルの価値向上に貢献します。
-          </li>
-        </ul>
+        <img src="40.png" class="top">
+        <div id="concept" class="anchor">-3CONCEPT</div>
+        
+        <div class="container">
+        <div class="row">	
+                <div class="col-md-4 col-sm-6 col-xs-12">    
+                  <div class="card" style="width: 18rem;">
+                    <img src="40.png" class="bd-placeholder-img card-img-top icon-1 mx-auto d-block">
+                    <div class="card-body">
+                      <h5 class="card-title">ローカル思考</h5>
+                      <p class="card-text">少子高齢化、人口減少の最前線はローカルにあります。そこで社会課題解決の緒を探っていきます。</p>
+                    </div>
+                　</div>
+              　</div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">   
+                  <div class="card" style="width: 18rem;">
+                    <img src="40.png" class="bd-placeholder-img card-img-top icon-1 mx-auto d-block"> 
+                    <div class="card-body">
+                      <h5 class="card-title">ソフトからのアプローチ</h5>
+                      <p class="card-text">WEBサービスの開発・対外的な発信を通じて、ソフト面から地域課題の解決に貢献します。</p>
+                    </div>
+                　</div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">   
+                  <div class="card" style="width: 18rem;">
+                    <img src="40.png" class="bd-placeholder-img card-img-top icon-1 mx-auto d-block"> 
+                    <div class="card-body">
+                      <h5 class="card-title">フィールドワーカー</h5>
+                      <p class="card-text">ローカルに足を運び、現場での出会いや気づきをCOMORIの活動に活かしていきます</p>
+                    </div>
+                　</div>
+                </div>
+
+                
+        </div>
+        </div>
+      </div>
+      
+
+      <div class="contents">
+        <div id="works" class="anchor">-WORKs</div>
+        
+        <div class="container">
+          <div class="row">	
+            <div class="col-md-4 col-sm-6 col-xs-12">    
+              <div class="card" style="width: 18rem;">
+                <img src="40.png" class="bd-placeholder-img card-img-top icon-1 mx-auto d-block">
+                <div class="card-body">
+                  <h5 class="card-title">KOLOT</h5>
+                  <p class="card-text"><a href="https://kolot.herokuapp.com/kolot/index" class="kolot">木質バイオマスの供給情報共有サービス</a></p>
+                </div>
+            　</div>
+          　</div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">    
+            <div class="card" style="width: 18rem;">
+              <img src="40.png" class="bd-placeholder-img card-img-top icon-1 mx-auto d-block">
+              <div class="card-body">
+                <h5 class="card-title">KOLOT</h5>
+                <p class="card-text"><a href="https://kolot.herokuapp.com/kolot/index" class="kolot">木質バイオマスの供給情報共有サービス</a></p>
+              </div>
+          　</div>
+        　</div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">    
+          <div class="card" style="width: 18rem;">
+            <img src="40.png" class="bd-placeholder-img card-img-top icon-1 mx-auto d-block">
+            <div class="card-body">
+              <h5 class="card-title">KOLOT</h5>
+              <p class="card-text"><a href="https://kolot.herokuapp.com/kolot/index" class="kolot">木質バイオマスの供給情報共有サービス</a></p>
+            </div>
+        　</div>
+      　</div>
+
+          </div>
+        </div>
       </div>
 
       <div class="contents">
-        <h2>-WORKs-</h2>
-        <ul>
+        <div id="contact" class="anchor">-CONTACT</div>
+        <ul class="item">
           <li>
             <a href="https://kolot.herokuapp.com/kolot/index">木質バイオマスの供給情報共有サービス</a>
           </li>
         </ul>
       </div>
-
+      <div class="container">
+        <div class="row">	
+          <div class="col-md-4 col-sm-6 col-xs-12">    
+            A
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">    
+            B
+          </div>
+          <div class="col-md-4 col-sm-12 col-xs-12">    
+            C
+          </div>
+        </div>
+      </div>
   </div>
   <footer>
    
